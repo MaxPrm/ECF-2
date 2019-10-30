@@ -17,7 +17,7 @@
 }
 
 /* Hide the images by default */
-.mySlides{
+.mySlides, .miniSlides{
   display: none;
 }
 
@@ -108,9 +108,9 @@
 }
 
 .minislideimg{
-  padding: 20%;
-  width: 100%;
-  height: 30em;
+  border-radius: 10%;
+  width: 10em;
+  height: 15em;
 }
 
 #slidedot{
@@ -166,4 +166,15 @@
 .secfilm{
   display: flex;
   justify-content: space-between;
+  margin-top: 15%;
+  padding: 10%;
+}
+
+.realfilm{
+  padding: 10%;
+}
+
+.slideshow-container1 {
+  position: relative;
+  margin: auto;
 }

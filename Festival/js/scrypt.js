@@ -33,18 +33,31 @@ function showSlides(n) {
 // miniSlider //
 
 var slideIndexx = 0;
-showSlides();
+showSlidess();
 
 function showSlidess() {
   var i;
-  var slidess = document.getElementsByClassName("miniSlides");
-  for (i = 0; i < slidess.length; i++) {
-    slidess[i].style.display = "none";
+  var slides = document.getElementsByClassName("miniSlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
   slideIndexx++;
-  if (slideIndexx > slidess.length) {slideIndexx = 1}
-  slidess[slideIndexx-1].style.display = "block";
-  setTimeout(showSlidess, 2000); // Change image every 2 seconds
+  if (slideIndexx > slides.length) {slideIndexx = 1}
+  slides[slideIndexx-1].style.display = "block";
+  setTimeout(showSlidess, 5000); // Change image every 2 seconds
+}
+
+showSlidesss();
+function showSlidesss() {
+  var i;
+  var slides = document.getElementsByClassName("miniSlides2");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndexx++;
+  if (slideIndexx > slides.length) {slideIndexx = 1}
+  slides[slideIndexx-1].style.display = "block";
+  setTimeout(showSlidesss, 5000); // Change image every 2 seconds
 }
 
 // QUIZ //
