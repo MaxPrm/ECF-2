@@ -1,4 +1,3 @@
-
 /* Slider */
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -18,36 +17,70 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
-// miniSlider //
+// Scrol top
 
+$(function(){
+  $('body').append("<div id='scrolltop'><i class='fas fa-caret-square-up fa-3x'></i></div>");
+  $('#scrolltop').css ({
+    'position': 'fixed',
+    'width': '35px',
+    'height': '35px',
+    'bottom': '50px',
+    'right': '50px',
+    'display': 'none'
+  });
+  $(window).scroll(function(){
+    if ($(window).scrollTop()<350) {
+      $('#scrolltop').fadeOut();
+    } else {
+      $('#scrolltop').fadeIn();
+    }
+  });
+
+  $('#scrolltop').click(function(){
+    $('html, body').animate({scrollTop:'0'}, 'slow');
+  });
+});
+
+// slider
+
+// Présentation des films de Buster keaton (index.html)
 var slideIndexx = 0;
 showSlidess();
 
 function showSlidess() {
   var i;
-  var slides = document.getElementsByClassName("miniSlides");
+  var slides = document.getElementsByClassName("miniSlides1");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   slideIndexx++;
-  if (slideIndexx > slides.length) {slideIndexx = 1}
-  slides[slideIndexx-1].style.display = "block";
+  if (slideIndexx > slides.length) {
+    slideIndexx = 1
+  }
+  slides[slideIndexx - 1].style.display = "block";
   setTimeout(showSlidess, 5000); // Change image every 2 seconds
 }
 
+// Présentation des films de Harold Lloyd (index.html)
 showSlidesss();
+
 function showSlidesss() {
   var i;
   var slides = document.getElementsByClassName("miniSlides2");
@@ -55,135 +88,174 @@ function showSlidesss() {
     slides[i].style.display = "none";
   }
   slideIndexx++;
-  if (slideIndexx > slides.length) {slideIndexx = 1}
-  slides[slideIndexx-1].style.display = "block";
+  if (slideIndexx > slides.length) {
+    slideIndexx = 1
+  }
+  slides[slideIndexx - 1].style.display = "block";
   setTimeout(showSlidesss, 5000); // Change image every 2 seconds
 }
 
+
 // QUIZ //
 
-var quizkeaton = [
-	{
-		question: "En quelle année Buster Keaton se lance dans le cinéma ?",
-		answers: {
-			a: '1915',
-			b: '1917',
-			c: '1922'
-		},
-		correctAnswer: 'b'
-	},
-	{
-		question: "Il obtient son premier grand rôle, dans :",
-		answers: {
-			a: 'La maison démontable',
-			b: 'Frigo déménageur',
-			c: 'Frigo à l’Electric Hotel'
-		},
-		correctAnswer: 'a'
-	},
+// les questions
+var Lequiz = [{
+    question: "En quelle année Buster Keaton se lance dans le cinéma ?",
+    reponse: {
+      a: '1915',
+      b: '1917',
+      c: '1922'
+    },
+    correctAnswer: 'b'
+  },
   {
-		question: "Quel était son surnom ?",
-		answers: {
-			a: 'L’homme qui ne rit jamais',
-			b: 'Le clown triste',
-			c: 'L’artiste burlesque'
-		},
-		correctAnswer: 'a'
-	},
+    question: "Il obtient son premier grand rôle, dans :",
+    reponse: {
+      a: 'La maison démontable',
+      b: 'Frigo déménageur',
+      c: 'Frigo à l’Electric Hotel'
+    },
+    correctAnswer: 'a'
+  },
   {
-		question: "A partir de quand sa carrière décline ?",
-		answers: {
-			a: 'Les années 20',
-			b: 'Les années 30',
-			c: 'Les années 40'
-		},
-		correctAnswer: 'b'
-	}
+    question: "Quel était son surnom ?",
+    reponse: {
+      a: 'L’homme qui ne rit jamais',
+      b: 'Le clown triste',
+      c: 'L’artiste burlesque'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "A partir de quand sa carrière décline ?",
+    reponse: {
+      a: 'Les années 20',
+      b: 'Les années 30',
+      c: 'Les années 40'
+    },
+    correctAnswer: 'b'
+  },
+  {
+    question: "quoi le reconnait-on ?",
+    reponse: {
+      a: 'Son costume 3 pièces',
+      b: 'Son canotier et ses lunettes',
+      c: 'Son cigare'
+    },
+    correctAnswer: 'b'
+  },
+  {
+    question: "En quelle année est-il né ?",
+    reponse: {
+      a: '1893',
+      b: '1898',
+      c: '1900'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "En quelle année est-il au sommet de sa carrière ?",
+    reponse: {
+      a: '1921',
+      b: '1923',
+      c: '1929'
+    },
+    correctAnswer: 'b'
+  },
+  {
+    question: "Quel est son film le plus célèbre ?",
+    reponse: {
+      a: 'Monte la haut',
+      b: 'Monte là-dessus',
+      c: 'Descend par là'
+    },
+    correctAnswer: 'b'
+  }
 ];
+
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
-generateQuiz(quizkeaton, quizContainer, resultsContainer, submitButton);
+generateQuiz(Lequiz, quizContainer, resultsContainer, submitButton); //création du quiz
 
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
 
-	function showQuestions(questions, quizContainer){
-		// we'll need a place to store the output and the answer choices
-		var output = [];
-		var answers;
+  function showQuestions(questions, quizContainer) {
+    // stock les élèments et les réponse choisi
+    var output = [];
+    var reponse;
 
-		// for each question...
-		for(var i=0; i<questions.length; i++){
+    // Pour chaque question
+    for (var i = 0; i < questions.length; i++) {
 
-			// first reset the list of answers
-			answers = [];
+      // premier reset de la liste
+      reponse = [];
 
-			// for each available answer...
-			for(letter in questions[i].answers){
+      // Pour chaque réponse possible
+      for (letter in questions[i].reponse) {
 
-				// ...add an html radio button
-				answers.push(
-					'<label>'
-						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
-						+ letter + ': '
-						+ questions[i].answers[letter]
-					+ '</label>'
-				);
-			}
+        // ajout des radios
+        reponse.push(
+          '<label>' +
+          '<input type="radio" name="question' + i + '" value="' + letter + '">' +
+          letter + ': ' +
+          questions[i].reponse[letter] +
+          '</label>'
+        );
+      }
 
-			// add this question and its answers to the output
-			output.push(
-				'<div class="question">' + questions[i].question + '</div>'
-				+ '<div class="answers">' + answers.join('') + '</div>'
-			);
-		}
+      // ajout des questions et des réponses dans le output
+      output.push(
+        '<div class="question">' + questions[i].question + '</div>' +
+        '<div class="reponse">' + reponse.join('') + '</div>'
+      );
+    }
 
-		// finally combine our output list into one string of html and put it on the page
-		quizContainer.innerHTML = output.join('');
-	}
+    // combine le tout dans une seul string d'html et le met dans le html
+    quizContainer.innerHTML = output.join('');
+  }
 
 
-	function showResults(questions, quizContainer, resultsContainer){
+  function showResults(questions, quizContainer, resultsContainer) {
 
-		// gather answer containers from our quiz
-		var answerContainers = quizContainer.querySelectorAll('.answers');
+    // récupère les reponsé des tableaux
+    var answerContainers = quizContainer.querySelectorAll('.reponse');
 
-		// keep track of user's answers
-		var userAnswer = '';
-		var numCorrect = 0;
+    // garde un aperçu des réponse de l'utilisateur
+    var userAnswer = '';
+    var numCorrect = 0;
 
-		// for each question...
-		for(var i=0; i<questions.length; i++){
+    // pour chaque questions
+    for (var i = 0; i < questions.length; i++) {
 
-			// find selected answer
-			userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+      // trouver la réponse sélectionner
+      userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
 
-			// if answer is correct
-			if(userAnswer===questions[i].correctAnswer){
-				// add to the number of correct answers
-				numCorrect++;
+      // si la réponse est correct
+      if (userAnswer === questions[i].correctAnswer) {
+        // inrémentation au conteur de bonne réponse
+        numCorrect++;
 
-				// color the answers green
-				answerContainers[i].style.color = 'lightgreen';
-			}
-			// if answer is wrong or blank
-			else{
-				// color the answers red
-				answerContainers[i].style.color = 'red';
-			}
-		}
+        // color en verre
+        answerContainers[i].style.color = 'lightgreen';
+      }
+      // si réponse incorrect ou non cocher
+      else {
+        // color en rouge
+        answerContainers[i].style.color = 'red';
+      }
+    }
 
-		// show number of correct answers out of total
-		resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-	}
+    // montre le nombre de bonne réponse
+    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+  }
 
-	// show questions right away
-	showQuestions(questions, quizContainer);
+  // montre les questions
+  showQuestions(questions, quizContainer);
 
-	// on submit, show results
-	submitButton.onclick = function(){
-		showResults(questions, quizContainer, resultsContainer);
-	}
-
+  // montre les réponse lors du click sur le bouton
+  submitButton.onclick = function() {
+    showResults(questions, quizContainer, resultsContainer);
+  }
 }

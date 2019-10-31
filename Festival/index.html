@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/cssnavbar/style.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/mediaquery.css">
+
   <title></title>
 </head>
 
@@ -13,83 +15,55 @@
   <section id="top_header">
     <img src="img/logo.jpg" alt="logo">
   </section>
-  <nav id="navbar">
+  <nav class="navbar">
     <ul>
-      <button> ☰ </button>
-      <li><a href="">Accueil</a></li>
-      <li><a href="">Le Festival</a></li>
-      <!-- <li><button>Réalisateur</button>
-          <ul>
-            <li><a href="">Harold Clayton Lloyd</a></li>
-            <li><a href="">BUSTER KEATON</a></li>
-          </ul> -->
-      </li>
-      <!-- <li><button>Films</button>
-          <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul> -->
-      </li>
-      <li><a href="">Contact</a></li>
+      <button class="nabbut"> ☰ </button>
+      <li class="navli"><a href="">Accueil</a></li>
+      <li class="navli"><a href="#idlefestival">Le Festival</a></li>
+      <li class="navli"><a href="">Contact</a></li>
     </ul>
   </nav>
-  <!-- <div id="slide">
-        <img src="images-Keaton/La-croisiere-affiche.jpg" alt="affiche">
-        <img src="images-Keaton/les-trois-ages-affiche.jpg" alt="affiche">
-        <img src="images-Keaton/mecano-affiche.jpg" alt="affiche">
-        <img src="images-Keaton/Sherlock-Junior-affiche.jpg" alt="affiche">
-        <img src="images-Lloyd/Faut-pas-sen-faire-affiche.jpg" alt="affiche">
-        <img src="images-Lloyd/Monte-la-dessus-affiche.jpg" alt="affiche">
-        <img src="images-Lloyd/Petit-frere-affiche.jpg" alt="affiche">
-        <img src="images-Lloyd/Vive-le-sport-affiche.jpg" alt="affiche">
-    </div> -->
   <div class="slideshow-container">
     <!-- Image -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 8</div>
       <img class="slideimg" src="images-Keaton/La-croisiere-affiche.jpg" alt="affiche">
-      <div class="text">Caption Text</div>
+
     </div>
     <div class="mySlides fade">
       <div class="numbertext">2 / 8</div>
       <img class="slideimg" src="images-Keaton/les-trois-ages-affiche.jpg" alt="affiche">
-      <div class="text">Caption Two</div>
+
     </div>
     <div class="mySlides fade">
       <div class="numbertext">3 / 8</div>
       <img class="slideimg" src="images-Keaton/mecano-affiche.jpg" alt="affiche">
-      <div class="text">Caption Three</div>
+
     </div>
     <div class="mySlides fade">
       <div class="numbertext">4 / 8</div>
       <img class="slideimg" src="images-Keaton/Sherlock-Junior-affiche.jpg" alt="affiche">
-      <div class="text">Caption Three</div>
+
     </div>
     <div class="mySlides fade">
       <div class="numbertext">5 / 8</div>
       <img class="slideimg" src="images-Lloyd/Faut-pas-sen-faire-affiche.jpg" alt="affiche">
-      <div class="text">Caption Three</div>
+
     </div>
     <div class="mySlides fade">
       <div class="numbertext">6 / 8</div>
       <img class="slideimg" src="images-Lloyd/Monte-la-dessus-affiche.jpg" alt="affiche">
-      <div class="text">Caption Three</div>
+
     </div>
     <div class="mySlides fade">
       <div class="numbertext">7 / 8</div>
       <img class="slideimg" src="images-Lloyd/Petit-frere-affiche.jpg" alt="affiche">
-      <div class="text">Caption Three</div>
+
     </div>
     <div class="mySlides fade">
       <div class="numbertext">8 / 8</div>
       <img class="slideimg" src="images-Lloyd/Vive-le-sport-affiche.jpg" alt="affiche">
-      <div class="text">Caption Three</div>
+
     </div>
     <!-- Boutons avant / Arrière -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -108,7 +82,7 @@
     <span class="dot" onclick="currentSlide(7)"></span>
     <span class="dot" onclick="currentSlide(8)"></span>
   </div>
-  <div class="lefestival">
+  <div class="lefestival" id="idlefestival">
     <img src="img/old-frame.png" alt="old-frame">
     <p>Inventif, casse-cou, émouvant, hilarant, Buster Keaton est tout cela à la fois, et révolutionne la comédie burlesque du début du 20esiècle, à la même époque que Charlie Chaplin. Son personnage introverti mais téméraire, éternellement
       impassible et en quête d’amour, lui apportera une formidable notoriété. Le Keaton Project, mené par la Cinémathèque de Bologne et Cohen Films, permet de plonger dans son œuvre, en cours de restauration.Du cinéma muet à découvrir en musique eten
@@ -118,20 +92,18 @@
   <div class="indexrea">
     <div>
       <img src="images-Keaton/Buster_keaton.jpg" alt="réalisateur">
-      <a href="">En savoir plus</a>
     </div>
     <p>Buster Keaton, issu d'une famille d'artistes, débute par le music-hall. Il se lance au cinéma en 1917 dans les films deFatty Arbuckle, le roi du "slapstick", mais ce n'est qu'en 1919 qu'il obtient son premier grand rôle dansLa Maison
-      demontable. C'est dans une série de courts-métrages (Frigo demenageurouFrigo a l'Electric Hotelen 1922) qu'il confirme son talent pour la comédie burlesque.</p>
+      demontable. C'est dans une série de courts-métrages (Frigo demenageurouFrigo a l'Electric Hotelen 1922) qu'il confirme son talent pour la comédie burlesque.
+      <a href="information/information.html#idKeaton">En savoir plus</a></p>
   </div>
   <div class="indexrea">
     <div>
       <img src="images-Lloyd/Harold_Lloyd.jpg" alt="réalisateur">
-      <a href="">En savoir plus</a>
     </div>
-
     <p>Illustre comique américain, dans la lignée de Charles Chaplin et Buster Keaton, on le reconnait avec son canotier et ses lunettes écaille. Il a marqué les esprits avec la célèbre scène dans laquelle il se retrouve suspendu dans le vide
-      accroché aux aiguilles d’une horloge dans le filmMonte là-dessus! Il a tourné dans près de 200 films muets et parlants entre 1914 et 1947.</p>
-
+      accroché aux aiguilles d’une horloge dans le filmMonte là-dessus! Il a tourné dans près de 200 films muets et parlants entre 1914 et 1947.
+      <a href="information/information.html#idLloyd">En savoir plus</a></p>
   </div>
   <section class="secfilm">
     <div class="reafilm">
@@ -143,43 +115,43 @@
       </ul>
       <a href="">Voir ces films</a>
     </div>
-      <div class="slideshow-container1">
-        <!-- Image -->
-        <div class="miniSlides fade">
-          <img class="minislideimg" src="images-Keaton/La-croisiere-affiche.jpg" alt="affiche">
-          <div class="text">Caption Text</div>
-        </div>
-        <div class="miniSlides fade">
-          <img class="minislideimg" src="images-Keaton/les-trois-ages-affiche.jpg" alt="affiche">
-          <div class="text">Caption Two</div>
-        </div>
-        <div class="miniSlides fade">
-          <img class="minislideimg" src="images-Keaton/mecano-affiche.jpg" alt="affiche">
-          <div class="text">Caption Three</div>
-        </div>
-        <div class="miniSlides fade">
-          <img class="minislideimg" src="images-Keaton/Sherlock-Junior-affiche.jpg" alt="affiche">
-          <div class="text">Caption Three</div>
-        </div>
+    <div class="slideshow-container1">
+      <!-- Image -->
+      <div class="miniSlides1 fade">
+        <img class="minislideimg" src="images-Keaton/La-croisiere-affiche.jpg" alt="affiche">
+        <div class="text">Caption Text</div>
+      </div>
+      <div class="miniSlides1 fade">
+        <img class="minislideimg" src="images-Keaton/les-trois-ages-affiche.jpg" alt="affiche">
+        <div class="text">Caption Two</div>
+      </div>
+      <div class="miniSlides1 fade">
+        <img class="minislideimg" src="images-Keaton/mecano-affiche.jpg" alt="affiche">
+
+      </div>
+      <div class="miniSlides1 fade">
+        <img class="minislideimg" src="images-Keaton/Sherlock-Junior-affiche.jpg" alt="affiche">
+
+      </div>
     </div>
   </section>
   <section class="secfilm">
     <div class="slideshow-container1">
       <div class="miniSlides2 fade">
         <img class="minislideimg" src="images-Lloyd/Faut-pas-sen-faire-affiche.jpg" alt="affiche">
-        <div class="text">Caption Three</div>
+
       </div>
       <div class="miniSlides2 fade">
         <img class="minislideimg" src="images-Lloyd/Monte-la-dessus-affiche.jpg" alt="affiche">
-        <div class="text">Caption Three</div>
+
       </div>
       <div class="miniSlides2 fade">
         <img class="minislideimg" src="images-Lloyd/Petit-frere-affiche.jpg" alt="affiche">
-        <div class="text">Caption Three</div>
+
       </div>
       <div class="miniSlides2 fade">
         <img class="minislideimg" src="images-Lloyd/Vive-le-sport-affiche.jpg" alt="affiche">
-        <div class="text">Caption Three</div>
+
       </div>
     </div>
     </div>
@@ -193,9 +165,9 @@
       <a href="">Voir ces films</a>
     </div>
   </section>
-  <div class="">
-    <form class="" method="post">
-      <input type="text" value="" placeholder="Votre Nom">
+  <div class="leformulaire" id="idformulaire">
+    <form class="" method="post" name="form1">
+      <input class="leText" type="text" name="nom" value="" pattern="[A-Za-z]{3}" placeholder="Votre Nom">
       <select class="selectform">
         <option value="">Places</option>
         <option value="1">1</option>
@@ -209,7 +181,7 @@
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <input type="text" value="" placeholder="Votre prénom">
+      <input class="leText" type="text" name="prenom" value="" pattern="[A-Za-z]{3}" placeholder="Votre prénom">
       <select class="selectform">
         <option value="">Films</option>
         <option value="film1">La croisiere affiche</option>
@@ -221,24 +193,29 @@
         <option value="film7">Petit frere affiche</option>
         <option value="film8">Vive le sport affiche</option>
       </select>
-      <input type="email" value="" placeholder="Votre email">
+      <input type="mail" name="mail" name="mail" value="" placeholder="Votre email">
       <select class="selectform">
         <option value="">Séances</option>
         <option value="15h">15h</option>
         <option value="18h">18h</option>
         <option value="21h">21h</option>
       </select>
+      <input id="lesubmit" type="submit" value="Submit" placeholder="S'inscrire">
     </form>
   </div>
+  <div class="lequiz">
   <div id="quiz"></div>
   <button id="submit">Affichage du scrore</button>
   <div id="results"></div>
+  </div>
   <footer>
     <p>Contact</p>
   </footer>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="js/scrypt.js"></script>
   <script src="js/jsnavbar/scrypt.js"></script>
+  <script src="js/scryptform.js"></script>
+  <script src="js/all.js"></script>
 </body>
 
 </html>

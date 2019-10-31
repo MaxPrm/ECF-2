@@ -1,23 +1,28 @@
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
-#top_header{
+#top_header {
   display: flex;
   justify-content: center;
 }
 
-#top_header img{
+#top_header img {
   width: 10em;
   height: 10em;
 }
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  padding: 10%;
 }
 
 /* Hide the images by default */
-.mySlides, .miniSlides{
+.mySlides, .miniSlides1, .miniSlides2, .miniSlides3 {
   display: none;
 }
 
@@ -45,7 +50,7 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -90,91 +95,229 @@
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+  padding: 10%;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
-.slideimg{
+.slideimg {
   width: 100%;
   height: 30em;
 }
 
-.minislideimg{
+.minislideimg {
   border-radius: 10%;
   width: 10em;
+  ;
   height: 15em;
 }
 
-#slidedot{
+#slidedot {
   text-align: center;
 }
 
-.lefestival img{
-  /* position: relative; */
+.lefestival img {
   height: 20em;
   width: 100%;
 }
-/*
-.lefestival p{
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  padding: 20%;
-  font-size: 0.7em;
-  color: white;
 
-} */
-
-.indexrea{
+.indexrea {
   display: flex;
   justify-content: space-between;
   padding: 8%;
 }
 
-.indexrea div{
+.indexrea div {
   display: flex;
   flex-direction: column;
 }
 
-.indexrea div img{
+.indexrea div img {
   width: 90%;
   height: auto;
   border-radius: 10%;
 }
 
-.indexrea a{
+.indexrea a {
   margin-top: 25%;
   padding: 10%;
   text-decoration: none;
 }
 
-.indexrea p{
+.indexrea p {
   width: 80%;
   padding: 3%;
   font-size: 0.8em;
 }
 
-.secfilm{
+.secfilm {
   display: flex;
   justify-content: space-between;
   margin-top: 15%;
+  padding: 8%;
+}
+
+.realfilm {
   padding: 10%;
 }
 
-.realfilm{
-  padding: 10%;
+.reafilm ul li {
+  font-size: 0.8em;
 }
 
 .slideshow-container1 {
   position: relative;
   margin: auto;
+}
+
+.leformulaire {
+  padding: 10%;
+  background-color: rgb(175, 175, 175);
+}
+
+#lesubmit {
+  margin-top: 5%;
+  padding: 10%;
+  margin: auto;
+}
+
+.lequiz {
+  padding: 10%;
+}
+
+
+
+/* Style de la page information */
+
+
+p {
+  font-size: 0.8em;
+}
+
+.infofilms li {
+  font-size: 0.8em;
+}
+
+.infofilms .pInLi {
+  font-size: 1em;
+}
+
+.realisateur {
+  display: flex;
+  justify-content: space-between;
+  padding: 10%;
+}
+
+.realisateur .imgartiste {
+  width: 49%;
+}
+
+.realisateur .imgartiste img {
+  width: 100%;
+  height: 15em;
+}
+
+.inforea1 {
+  width: 49%;
+}
+
+.infoetslider {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.films {
+  padding: 10%;
+}
+
+
+/* Style de la navbar*/
+
+
+.navbar{
+  width: 100vw;
+  background-color: #D6EFFF;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navli{
+  style-type: none;
+
+  /*when I specify 2 values to margin, the first one is for the top and bottom side, the second for the left and right side*/
+  margin: 0 2vw;
+}
+
+.navbar a{
+  text-decoration: none;
+  /*below I changed the color*/
+  color: black;
+  /*I added some padding*/
+  padding: 2vw;
+  /*also changed the font family but that's totally irrelevant*/
+  font-family: monospace;
+}
+
+.navbar .nabbut{
+  display: none;
+}
+
+/*change the layout of the navigation bar for all the screens
+that have a width less or equal than 500px*/
+
+@media only screen and (max-width: 1020px) {
+  /*shows elements in a column*/
+  .navbar ul{
+    flex-direction: column;
+  }
+
+  /* deletes margin on top or bottom of the a tag*/
+  .navbar .navli{
+    margin: 0;
+    display: none;
+  }
+ /* makes sure that the a tag will take the entire screen*/
+  .navbar a{
+    display: block;
+  }
+
+  .navbar .nabbut{
+    /*makes the .nabbut visible*/
+    display: block;
+
+    /*since we are here, we can style it a .navlittle bit!*/
+    padding: 2vw;
+    font-size: 3vh;
+    background-color: #AFE0FF;
+    border: none;
+
+    /*out.navline none removes the default blue border that appears anytime you c.navlick on the .nabbut*/
+    outline: none;
+
+    cursor: pointer;
+    /*this put the .nabbut on the left*/
+    align-self: flex-start;
+  }
 }
